@@ -213,32 +213,20 @@ Now you can create a PHP script that will connect to MySQL and query for your co
 vi /var/www/projectLEMP/todo_list.php
 
 Paste the text below into the blank file
-<?php
-$user = "example_user";
-$password = "password";
-$database = "example_database";
-$table = "todo_list";
 
-try {
-  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-  echo "<h2>TODO</h2><ol>";
-  foreach($db->query("SELECT content FROM $table") as $row) {
-    echo "<li>" . $row['content'] . "</li>";
-  }
-  echo "</ol>";
-} catch (PDOException $e) {
-    print "Error!: " . $e->getMessage() . "<br/>";
-    die();
-
-}
-
+TODO
+"; foreach($db->query("SELECT content FROM $table") as $row) { echo "
+" . $row['content'] . "
+"; } echo "
+"; } catch (PDOException $e) { print "Error!: " . $e->getMessage() . "
+"; die(); }
 Save and close the file when you are done editing.
 
 Access the browser through the URL below:
 
+http://<Public_domain_or_IP>/todo_list.php and you will see something like these
 
-
-
+![my new pro(14)](https://user-images.githubusercontent.com/112444993/225509434-fb34af95-25a0-4e33-9838-e8390e4b0520.jpg)
 
 
 
